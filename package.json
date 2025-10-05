@@ -1,20 +1,15 @@
 {
+  "$schema": "https://json.schemastore.org/package.json",
   "name": "hedera-ai-exchange-hex",
   "version": "1.0.0",
   "description": "HEX - Hedera AI Exchange: The world's first decentralized AI agent marketplace",
   "scripts": {
-    "start": "parcel public/index.html",
-    "start-hex": "node start-hex.js",
-    "build": "parcel build public/index.html",
-    "test": "node index.js",
-    "setup-topics": "node src/setupAgentTopics.js",
-    "setup-live-agents": "node setup-live-agents.js",
-    "test-agent": "node test-agent-registration.js",
-    "run-agent": "node run-agent.js",
-    "run-all-agents": "node run-all-agents.js",
-    "run-live-agents": "node run-live-agents.js",
-    "test-live": "node test-live-agent.js",
-    "test-invoke": "node test-invoke-live-agent.js"
+    "dev": "cd hex-agent-website && npm run dev",
+    "build": "cd hex-agent-website && npm run build",
+    "agents": "node start-all-agents.js",
+    "setup": "node scripts/setup-agent.js",
+    "test": "node test-conversational-agent.js",
+    "test-all": "node scripts/test-agents.js"
   },
   "keywords": [],
   "author": "",
