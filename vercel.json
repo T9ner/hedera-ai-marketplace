@@ -1,8 +1,7 @@
 {
-  "buildCommand": "cd hex-agent-website && npm ci && npm run build",
+  "buildCommand": "cd hex-agent-website && npm install && npm run build",
   "outputDirectory": "hex-agent-website/dist",
   "installCommand": "npm install --prefix hex-agent-website",
-  "framework": null,
   "rewrites": [
     {
       "source": "/(.*)",
