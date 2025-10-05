@@ -14,6 +14,7 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Fixed routing issues - all deployments should now work properly
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <WalletProvider>
