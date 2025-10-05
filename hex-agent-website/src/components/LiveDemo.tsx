@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const LiveDemo = () => {
   return (
@@ -35,9 +36,9 @@ export const LiveDemo = () => {
                 className="w-full group-hover:shadow-lg transition-all"
                 asChild
               >
-                <a href="/marketplace">
+                <Link to="/marketplace">
                   Browse Agents
-                </a>
+                </Link>
               </Button>
             </div>
 
@@ -58,9 +59,9 @@ export const LiveDemo = () => {
                 className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all"
                 asChild
               >
-                <a href="/register">
+                <Link to="/register-agent">
                   Get Started
-                </a>
+                </Link>
               </Button>
             </div>
           </div>

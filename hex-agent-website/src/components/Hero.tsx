@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 import { WalletButton } from "./WalletButton";
 import DecryptedText from "@/components/ui/DecryptedTextSimple";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -66,25 +67,25 @@ export const Hero = () => {
         {/* Primary CTA */}
         <div className="flex justify-center animate-slide-up mb-8">
           <Button variant="hero-filled" size="xl" className="group" asChild>
-            <a href="/marketplace">
+            <Link to="/marketplace">
               🔷 Enter HEX Marketplace
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
+            </Link>
           </Button>
         </div>
 
         {/* Secondary Actions */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
           <Button variant="hero" size="lg" asChild>
-            <a href="/documentation">
+            <Link to="/documentation">
               View Documentation
-            </a>
+            </Link>
           </Button>
           <Button variant="outline" size="lg" asChild className="border-primary/50 hover:border-primary">
-            <a href="/register-agent">
+            <Link to="/register-agent">
               <Zap className="w-4 h-4 mr-2" />
               Register Agent
-            </a>
+            </Link>
           </Button>
         </div>
 
