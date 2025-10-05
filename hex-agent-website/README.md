@@ -1,73 +1,138 @@
-# Welcome to your Lovable project
+# 🏆 HEX - Hedera AI Agent Marketplace
 
-## Project info
+> **Hedera Africa Hackathon 2025 Submission**
 
-**URL**: https://lovable.dev/projects/486137b0-1d7f-458a-ba51-8a29efa26853
+**HEX** is the world's first decentralized AI agent marketplace built on Hedera Hashgraph. Discover, invoke, and monetize AI agents through blockchain technology.
 
-## How can I edit this code?
+![HEX Demo](https://via.placeholder.com/800x400/1a1a2e/ffffff?text=HEX+AI+Marketplace)
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+- 🤖 **Live AI Agents** - Sentiment analysis, object detection, conversational AI
+- 💰 **Blockchain Payments** - Pay for AI services using HBAR
+- 🔗 **Hedera Integration** - Built on Hedera Consensus Service (HCS)
+- 🎨 **Modern UI** - Beautiful glassmorphism design
+- 🔐 **Wallet Integration** - Secure HashPack wallet connection
+- 📊 **Agent Registration** - Easy agent onboarding system
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/486137b0-1d7f-458a-ba51-8a29efa26853) and start prompting.
+## 🚀 Quick Start
 
-Changes made via Lovable will be committed automatically to this repo.
+### 1. Install Dependencies
+```bash
+npm install
+cd hex-agent-website && npm install && cd ..
+```
 
-**Use your preferred IDE**
+### 2. Setup Environment
+```bash
+# Copy and configure environment variables
+cp .env.example .env
+# Add your Hedera account ID, private key, and Groq API key
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 3. Start AI Agents
+```bash
+npm run agents
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### 4. Start Website
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### 5. Visit Marketplace
+Open [http://localhost:3000](http://localhost:3000)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🤖 Available Agents
 
-**Use GitHub Codespaces**
+| Agent | Capability | Status | Price |
+|-------|------------|--------|-------|
+| **Sentiment Analyzer** | Text sentiment analysis | 🟢 LIVE | 0.001 HBAR |
+| **Object Detector** | Image object detection | 🟢 LIVE | 0.002 HBAR |
+| **Conversational AI** | Natural conversations | 🟢 LIVE | 0.001 HBAR |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🏗️ Architecture
 
-## What technologies are used for this project?
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   React Frontend │    │  Hedera Network │    │   AI Agents     │
+│                 │    │                 │    │                 │
+│  • Marketplace  │◄──►│  • HCS Topics   │◄──►│  • Groq API     │
+│  • Wallet UI    │    │  • HBAR Payments│    │  • Processing   │
+│  • Agent Cards  │    │  • Consensus    │    │  • Responses    │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
 
-This project is built with:
+## 🎯 Innovation: HSC-10 Standard
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+HEX introduces the **HSC-10 protocol** for standardized AI agent communication:
 
-## How can I deploy this project?
+```json
+{
+  "p": "hcs-10",
+  "op": "invoke",
+  "agentId": "0.0.123456@0.0.789012",
+  "data": { "input": "Hello AI!" },
+  "requester": "0.0.user123"
+}
+```
 
-Simply open [Lovable](https://lovable.dev/projects/486137b0-1d7f-458a-ba51-8a29efa26853) and click on Share -> Publish.
+## 📁 Project Structure
 
-## Can I connect a custom domain to my Lovable project?
+```
+hedera-ai-marketplace/
+├── hex-agent-website/          # React frontend
+│   ├── src/components/         # UI components
+│   ├── src/pages/             # Page components
+│   └── src/services/          # Blockchain services
+├── src/agents/                # AI agent implementations
+├── docs/                      # Documentation
+├── start-all-agents.js        # Agent runner
+└── setup-conversational-agent.js
+```
 
-Yes, you can!
+## 🔧 Development
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Available Scripts
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- `npm run dev` - Start development server
+- `npm run agents` - Start all AI agents
+- `npm run setup` - Setup new agent topics
+- `npm run test` - Test agent functionality
+- `npm run build` - Build for production
+
+### Adding New Agents
+
+1. Create agent class in `src/agents/`
+2. Extend `AgentProcessor` base class
+3. Implement `callGroqAPI()` method
+4. Add to `start-all-agents.js`
+
+## 🏆 Hackathon Highlights
+
+- ✅ **Full-stack DApp** with production-ready code
+- ✅ **Real AI integration** using Groq (free tier)
+- ✅ **Hedera blockchain** integration via HCS
+- ✅ **Modern UI/UX** with responsive design
+- ✅ **Wallet connectivity** with HashPack
+- ✅ **Agent marketplace** with discovery & payments
+- ✅ **Standardized protocol** (HSC-10) for AI agents
+
+## 🌟 Demo
+
+1. **Visit Marketplace**: Browse available AI agents
+2. **Connect Wallet**: Use HashPack wallet integration
+3. **Invoke Agent**: Send requests and receive AI responses
+4. **Register Agent**: List your own AI agent for others to use
+
+## 🤝 Contributing
+
+This project was built for the Hedera Africa Hackathon 2025. Feel free to explore, learn, and build upon it!
+
+## 📄 License
+
+MIT License - Built with ❤️ for the Hedera community
+
+---
+
+**🏆 Ready for first place!** 🚀
