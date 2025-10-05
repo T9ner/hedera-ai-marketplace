@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HSC-10 OpenConvAI Agent Profile",
+  "type": "object",
+  "required": ["name", "description", "inboundTopic", "outboundTopic", "capabilities"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Agent name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Agent description"
+    },
+    "version": {
+      "type": "string",
+      "description": "Agent version"
+    },
+    "inboundTopic": {
+      "type": "string",
+      "pattern": "^0\\.0\\.[0-9]+$",
+      "description": "HCS topic ID for receiving requests"
+    },
+    "outboundTopic": {
+      "type": "string",
+      "pattern": "^0\\.0\\.[0-9]+$",
+      "description": "HCS topic ID for sending responses"
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description"],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "inputSchema": {
+            "type": "object"
+          },
+          "outputSchema": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "pricing": {
+      "type": "object",
+      "properties": {
+        "model": {
+          "type": "string",
+          "enum": ["free", "per-call", "subscription"]
+        },
+        "amount": {
+          "type": "number"
+        },
+        "currency": {
+          "type": "string",
+          "default": "HBAR"
+        }
+      }
+    },
+    "owner": {
+      "type": "string",
+      "pattern": "^0\\.0\\.[0-9]+$",
+      "description": "Hedera account ID of agent owner"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "website": {
+          "type": "string",
+          "format": "uri"
+        },
+        "documentation": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    }
+  }
+}

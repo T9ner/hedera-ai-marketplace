@@ -1,0 +1,43 @@
+{
+  "name": "hedera-ai-exchange-hex",
+  "version": "1.0.0",
+  "description": "HEX - Hedera AI Exchange: The world's first decentralized AI agent marketplace",
+  "scripts": {
+    "start": "parcel public/index.html",
+    "start-hex": "node start-hex.js",
+    "build": "parcel build public/index.html",
+    "test": "node index.js",
+    "setup-topics": "node src/setupAgentTopics.js",
+    "setup-live-agents": "node setup-live-agents.js",
+    "test-agent": "node test-agent-registration.js",
+    "run-agent": "node run-agent.js",
+    "run-all-agents": "node run-all-agents.js",
+    "run-live-agents": "node run-live-agents.js",
+    "test-live": "node test-live-agent.js",
+    "test-invoke": "node test-invoke-live-agent.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@hashgraph/sdk": "^2.74.0",
+    "@langchain/core": "^0.3.78",
+    "@langchain/openai": "^0.6.14",
+    "@pinata/sdk": "^2.1.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "axios": "^1.12.2",
+    "dotenv": "^17.2.3",
+    "groq-sdk": "^0.33.0",
+    "hedera-agent-kit": "^3.3.0",
+    "langchain": "^0.3.35",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-joyride": "^2.9.2",
+    "react-toastify": "^10.0.5"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  }
+}
