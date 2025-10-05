@@ -1,0 +1,43 @@
+# Dependencies
+node_modules
+hex-agent-website/node_modules
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build outputs (except the one we want to deploy)
+dist
+build
+
+# Development files
+src/agents
+scripts
+docs
+
+# Documentation
+*.md
+!hex-agent-website/README.md
+
+# Test files
+test-*.js
+*-test.js
+*.test.js
+
+# Development scripts
+start-all-agents.js
+run-*.js
+setup-*.js
+
+# Logs
+*.log
+logs
+
+# IDE files
+.vscode
+.idea
+
+# OS files
+.DS_Store
+Thumbs.db
