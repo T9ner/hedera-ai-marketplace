@@ -2,10 +2,18 @@
   "buildCommand": "cd hex-agent-website && npm install && npm run build",
   "outputDirectory": "hex-agent-website/dist",
   "installCommand": "npm install --prefix hex-agent-website",
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|svg|gif|woff|woff2|ttf|eot))",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
