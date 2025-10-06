@@ -58,8 +58,12 @@ export const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
       };
 
       const handleChainChanged = (chainId: string) => {
-        // Reload the page when chain changes
-        window.location.reload();
+        // Update wallet info instead of reloading the page
+        if (wallet) {
+          const updatedWallet = { ...wallet, chainId };
+          setWallet(updatedWallet);
+          localStorage.setItem('hex-wallet', JSON.stringify(updatedWallet));
+        }
       };
 
       (window as any).ethereum.on('accountsChanged', handleAccountsChanged);

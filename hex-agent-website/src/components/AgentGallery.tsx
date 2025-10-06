@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Bot, Brain, MessageSquare, Image, Code, TrendingUp, Clock } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import DecryptedText from "@/components/ui/DecryptedTextSimple";
 
 const agents = [
@@ -52,6 +53,8 @@ const agents = [
 ];
 
 export const AgentGallery = () => {
+  const navigate = useNavigate();
+  
   return (
     <section className="py-24 px-4 relative">
       <div className="max-w-7xl mx-auto">
@@ -100,7 +103,7 @@ export const AgentGallery = () => {
                 key={agent.name}
                 className="group relative glass rounded-2xl p-8 border-2 border-border hover:border-primary/50 transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_hsl(var(--primary)/0.3)] cursor-pointer overflow-hidden animate-scale-in min-h-[280px]"
                 style={{ animationDelay: `${index * 0.1}s` }}
-                onClick={() => window.location.href = '/marketplace'}
+                onClick={() => navigate('/marketplace')}
               >
                 {/* Gradient Background on Hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${agent.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
